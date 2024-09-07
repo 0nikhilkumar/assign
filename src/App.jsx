@@ -6,21 +6,19 @@ export default function LandingPage() {
   const [activeTab, setActiveTab] = useState('About Me')
 
 
-  const scrollContainerRef = useRef(null); // Create a reference for the scrollable container
-  const imageWidth = 190; // Width of each image
-  const scrollAmount = imageWidth * 3; // Scroll by 3 images (3 * 190px = 570px)
+  const scrollContainerRef = useRef(null);
+  const imageWidth = 190;
+  const scrollAmount = imageWidth * 3;
 
-  // Function to scroll left (skip 3 images backward)
   const scrollToLeft = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft -= scrollAmount; // Scroll left by 570px
+      scrollContainerRef.current.scrollLeft -= scrollAmount;
     }
   };
 
-  // Function to scroll right (skip 3 images forward)
   const scrollToRight = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft += scrollAmount; // Scroll right by 570px
+      scrollContainerRef.current.scrollLeft += scrollAmount;
     }
   };
 
@@ -50,12 +48,10 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#282d31] to-[#191B1F] text-white p-8 flex justify-between">
-      {/* Left Section */}
       <div className="w-1/2 pr-8">
         <div className="bg-[#616161D1] rounded-lg p-6 shadow-lg h-full border border-[1px] border-[#96BEE7]"></div>
       </div>
 
-      {/* Right Section */}
       <div className="w-1/2 space-y-[1.45rem] h-full">
         <div className="bg-[#363C43] h-[312px] rounded-lg p-6 flex justify-center items-center shadow-[5.67px_5.67px_3.78px_0px_#00000066]">
           <div className="flex justify-between items-start">
